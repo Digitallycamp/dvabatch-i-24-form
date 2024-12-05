@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact form</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<h1>Contact us</h1>
+				<div class="form-container">
+					<form>
+						<div class="firstlast">
+							<div class="firstname">
+								<label>Firstname *</label>
+								<input type="text" name="firstname" />
+								<span class="msg"></span>
+							</div>
+							<div class="lastname">
+								<label>Lastname *</label>
+								<input type="text" name="lastname" />
+								<span class="msg"></span>
+							</div>
+						</div>
+						<div class="email-address">
+							<label>Emailadress *</label>
+							<input type="email" name="emailaddress" />
+							<span class="msg"></span>
+						</div>
+						<div class="query-type">
+							<label>Query type</label>
+							<div class="quries">
+								<div class="genral">
+									<input type="radio" name="queries" value="GEN" />
+									<label>General Enquirey</label>
+								</div>
+								<div class="genral">
+									<input type="radio" name="queries" value="SUP" />
+									<label>Support request</label>
+								</div>
+								<span class="msg"></span>
+							</div>
+							<div class="message">
+								<label>Message</label>
+								<textarea rows="5" name="message"></textarea>
+								<span class="msg"></span>
+							</div>
+							<div class="consent">
+								<input type="checkbox" name="agree" id="terms" />
+								<label>I consent to being contacted by the team</label
+								><br /><br />
+								<span class="msg"></span>
+							</div>
+							<div class="btn">
+								<button type="submit">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

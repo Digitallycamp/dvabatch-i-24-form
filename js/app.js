@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const msg = document.querySelectorAll('.msg');
 const lmsg = document.querySelector('.lmsg');
 const terms = document.querySelector('#terms');
+const sucess = document.querySelector('.sucess');
 
 form.addEventListener('submit', handleSubmit);
 
@@ -16,7 +17,8 @@ terms.addEventListener('change', (event) => {
 	}
 });
 
-function handleSubmit(event) {
+let submitting = false;
+async function handleSubmit(event) {
 	event.preventDefault();
 
 	const firstname = event.currentTarget.firstname.value;
@@ -55,5 +57,12 @@ function handleSubmit(event) {
 		queries,
 	};
 
-	console.log(data);
+	try {
+		sucess.textContent = 'Submitting query ...';
+		sucess.classList.add('success');
+		await new Promise((resolve) => setTimeout(resolve, 2000));
+		console.log(data);
+		sucess.textContent = 'Query submitted successfully';
+		sucess.classList.add('success');
+	} catch (error) {}
 }
